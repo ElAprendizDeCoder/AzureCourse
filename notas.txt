@@ -12,6 +12,32 @@ az group create --name Crea-By-shell-CLI --location "East US"
 az group show --name MyFirstRG
 
 
+# ver tags in resource group 
+
+(Get-AzureRmResourceGroup -Name "MyFirstRG").Tags
+
+Dept IT 
+
+Set-AzureRmResourceGroup -Name "MyFirstRG" -Tag @{Dept="IT"; Owner="SusanBerlin"}
+
+
+
+Set-AzureRmResourceGroup -Name "MyFirstRG" -Tag @{CostCenter="COntaduria"}
+
+
+$tags = (Get-AzureRmResourceGroup -Name "MyFirstRG").Tags
+
+
+Remove-AzureRmResourceGroup -name "Crea-By-CLI"
+
+
+
+
+az group delete -n "MyFirstRG"
+
+
+
+
 
 
 
