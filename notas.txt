@@ -1,3 +1,17 @@
 
 Create New Resource group 
 New-AzureRmResourceGroup -name "Crea-By-CLI" -Location "East US" 
+
+# Crear grupo desde cli az group create --name Crea-By-shell-CLI --location "East US" 
+
+az group create --name Crea-By-shell-CLI --location "East US"
+
+
+# ver recurso 
+
+az group show --name MyFirstRG
+
+
+
+
+
