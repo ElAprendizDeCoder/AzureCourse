@@ -1,0 +1,3 @@
+
+Create New Resource group 
+New-AzureRmResourceGroup -name "Crea-By-CLI" -Location "East US" 
