@@ -63,6 +63,38 @@ az storage account list -g MyFirstRG --query [*].{Nmae:name,Location:primaryLoca
 az resource list --tag Dept=ITcls
 
 
+# Login directo desde cmd con az 
+
+az login -u emailacount@domain.com  -p Password
+[
+  {
+    "cloudName": "AzureCloud",
+    "id": "18a557a3-edac-45cd-a1cd-64dee23ae88e",
+    "isDefault": true,
+    "name": "Free Trial",
+    "state": "Enabled",
+    "tenantId": "0447c57e-50b7-45ee-9286-eab2ddc26f42",
+    "user": {
+      "name": "dav_mer_18@hotmail.com",
+      "type": "user"
+    }
+  }
+]
+
+
+#upload file 
+
+az storage blob upload --file "C:\Upload\testfile.txt" --container-name marketingdocs --name training.txt --account-name exampleorgsrgacct01 --acount-key key
+
+
+
+
+
+
+
+
+
+
 
 
 
