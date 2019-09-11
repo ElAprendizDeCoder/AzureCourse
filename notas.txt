@@ -39,5 +39,44 @@ az group delete -n "MyFirstRG"
 
 
 
+# Crear y configurar storage account 
+
+az account list-locations --query [*].[display,name] --out table
+
+
+az storage account check-name --name stgacctnm2
+
+
+az storage account create --name stacctnm4 --resource-group MyFirstRG --location estatus --sku Standard_LRS --Kind StorageV2  
+
+
+az storage account show -g MyFirstRG -n myfirstrgdiag835
+
+
+
+az storage account list -g MyFirstRG
+
+#Listar puntual storage account 
+
+az storage account list -g MyFirstRG --query [*].{Nmae:name,Location:primaryLocation,Sku:sku.name,Kind:kind} --out table
+
+az resource list --tag Dept=ITcls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
