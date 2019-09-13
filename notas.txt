@@ -39,6 +39,48 @@ az group delete -n "MyFirstRG"
 
 
 
+az interactive 
+
+az account list 
+
+
+az group create --location eastus --name new-vnet-rg 
+
+
+az network vnet create -g new-vnet-rg --name ps-vnet-1 --address-prefixes 192.168.0.0/16 --location eastus --subnet-name default --subnet-prefix 192.168.1.0/24
+
+
+# Ver vms
+get-azurermvm
+
+start-azurermvm -name dc1 -RosurceGroupName MiFirstVm
+
+start-azurermvm -name dc1 -RosurceGroupName MiFirstVm
+
+$dc1 = Get-Azurermvm -Name dc1 -RosirceGroupName MyFirstRG 
+
+$dc1 | stop-azurermvm -Force 
+
+
+
+
+$rgName = 'MyResourceGrupName'
+$vmName = 'MyVM'
+
+
+Stop-AzureRmVM -ResourceGroupName $rgName -Name $vmName -Force  
+
+
+
+
+
+
+
+
+
+
+
+
 # Crear y configurar storage account 
 
 az account list-locations --query [*].[display,name] --out table
